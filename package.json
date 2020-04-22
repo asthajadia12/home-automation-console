@@ -1,0 +1,49 @@
+{
+  "name": "home-automation-console",
+  "version": "1.0.0",
+  "description": "Home-automation-console",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/eslint/bin/eslint.js ./ --quiet --cache --ignore-pattern .gitignore",
+    "debug": "nodemon --inspect=5861 index.js"
+  },
+  "keywords": [],
+  "author": "Astha Jadia <asthajadia12@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "JSONStream": "^1.3.2",
+    "axios": "^0.16.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "boom": "^5.2.0",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "eslint": "^4.5.0",
+    "express": "^4.15.4",
+    "handlebars": "^4.0.11",
+    "helmet": "^3.8.2",
+    "joi": "^13.3.0",
+    "joi-error-formatter": "0.5.3",
+    "lodash": "4.17.5",
+    "moment": "^2.20.1",
+    "moment-timezone": "^0.5.14",
+    "morgan": "^1.8.2",
+    "pg": "^7.2.0",
+    "pg-query-stream": "^1.1.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.2",
+    "shortid": "^2.2.8",
+    "uuid": "^3.1.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">=6.9.4"
+  }
+}
