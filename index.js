@@ -15,13 +15,5 @@ const { pool } = require('./db').pg;
 pool.connect(() => {
 });
 
-// Running the required scripts
-/** Updatingn the database for logging the IP informations */
-const { createFolders } = require('./scripts');
-
-createFolders.init([
-  'log',
-]);
-
 // Start server
 const { appServer } = require('./web/server');

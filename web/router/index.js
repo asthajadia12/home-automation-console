@@ -1,7 +1,5 @@
-const { requestLogger, sanitizeRequestObj } = require('../middleware');
+const { sanitizeRequestObj } = require('../middleware');
 const router = require('express').Router();
-
-requestLogger(router);
 
 sanitizeRequestObj(router);
 

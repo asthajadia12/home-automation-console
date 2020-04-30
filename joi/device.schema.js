@@ -4,8 +4,9 @@ const Joi = require('joi');
 const deviceSchema = Joi.object().keys({
   device_id: Joi.number(),
   device_type: Joi.string().required(),
-  name: Joi.string().required(),
-  action: Joi.string(),
+  device_name: Joi.string().required(),
+  serial_number: Joi.string().required(),
+  // action: Joi.string(),
   is_active: Joi.boolean().required(),
 });
 

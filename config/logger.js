@@ -2,22 +2,19 @@ const { transports, Logger } = require('winston');
 const WinstonDailyRotateFile = require('winston-daily-rotate-file');
 const moment = require('moment');
 
-const env = process.env.ENV || 'development';
-const { toUTCDate, getAppName } = rootRequire('utils');
-
-const appName = getAppName();
+const env = process.env.NODE_ENV || 'development';
 
 const currentTransports = [
   new transports.Console({
     colorize: true,
-    timestamp: toUTCDate(moment().format()),
+    timestamp: moment().format(),
     handleExceptions: false,
     json: false,
     level: 'debug',
     formatter: (options) => {
       // if (/notification/.test(options.message)) return '';
       const meta = (options.meta && Object.keys(options.meta).length ? `\n\t ${JSON.stringify(options.meta)}` : '');
-      return `${toUTCDate(moment().format())} - ${appName} - ${options.level.toUpperCase()} - ${undefined !== options.message ? options.message : ''} - ${meta}`;
+      return `${moment().format()} - ${options.level.toUpperCase()} - ${undefined !== options.message ? options.message : ''} - ${meta}`;
     },
   })
 ];
