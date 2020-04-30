@@ -47,3 +47,7 @@ CREATE TABLE devices (
 	#PGIDLETIMEOUT
 	#PGCONNECTIONTIMEOUT
 ```
+Resources used: 
+- Nodejs server for light and asynchronous request processing. As we are heavily dependent on external APIs. This will help in avoiding resource wastage on wait state.
+
+- Postgres for storing the state, metadata and identifier of device.
